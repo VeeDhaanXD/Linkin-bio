@@ -3,67 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Link Hub</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-o4efkEBcG+AV8Fiv1VdA7jJlfvODZPbK1aOPbE7cbS4vBAS97yT+E9Vv6nJ9n8mHbKIo+5E8RzjZtqvQ+Idv5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Link in Bio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #e66465, #9198e5, #f6d365, #fda085);
+      background-size: 400% 400%;
+      animation: gradientBackground 4s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 1rem;
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .card h1 {
+      margin-bottom: 1rem;
+      color: #1f2937;
+      font-size: 2rem;
+    }
+    .card h1 span{
+      color: #ff4800;
+      
+    }
+    .card h2 span{
+      color: red;
+      
+    }
+    .card h2,h3 {
+      margin-bottom: 1.5rem;
+      color: #6b7280;
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 0.75rem;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s;
+      font-size: 1rem;
+    }
+    .link-button:hover {
+      transform: scale(1.03);
+    }
+    .linkedin { background-color: #0a66c2; }
+    .instagram { background: linear-gradient(45deg, #fd1d1d, #833ab4, #fcb045); }
+    .snapchat { background-color: #fffc00; color: #000; }
+    .github { background-color: #333; }
+    .discord { background-color: #5865f2; }
+    .link-button i {
+      margin-right: 0.5rem;
+    }
+
     @media (max-width: 480px) {
       .card {
-        width: 90%;
         padding: 1.5rem 1rem;
-        border-radius: 20px;
       }
-
-      .logo {
-        width: 70px;
-        height: 70px;
-        font-size: 2rem;
+      .card h1 {
+        font-size: 1.5rem;
       }
-
-      .title {
-        font-size: 1.4rem;
+      .card h2 {
+        font-size: 1rem;
       }
-
-      .subtitle {
-        font-size: 0.95rem;
-      }
-
-      .link-btn {
+      .link-button {
         font-size: 0.9rem;
-        padding: 0.75rem 1rem;
-      }
-
-      .social-icons i {
-        font-size: 1.2rem;
-        margin: 0 5px;
-      }
-
-      .footer {
-        font-size: 0.8rem;
+        padding: 0.65rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="title">Hey, I'm Veedhaan</div>
-    <div class="subtitle">Connect with me online</div>
-
-    <div class="social-icons">
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-snapchat-ghost"></i>
-      <i class="fab fa-discord"></i>
-      <i class="fab fa-github"></i>
-    </div>
-
-    <a class="link-btn" href="https://www.linkedin.com/in/veedhaan/?_l=en_US"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a class="link-btn" href="https://www.instagram.com/veedhaan_60fps/"><i class="fab fa-instagram"></i> Instagram</a>
-    <a class="link-btn" href="https://www.snapchat.com/add/veedhaan07?share_id=hi2gSDGWHXA&locale=en-US"><i class="fab fa-snapchat-ghost"></i> Snapchat</a>
-    <a class="link-btn" href="https://discordapp.com/users/796664624636362792"><i class="fab fa-discord"></i> Discord</a>
-    <a class="link-btn" href="https://github.com/VeeDhaanXD"><i class="fab fa-github"></i> GitHub</a>
-
-
+    <h1>I am <span>Veedhaan</span></h1>
+    <h2>A Passionate <span>Full Stack Developer</span></h2>
+    <h3>Connect With Me</h3>
+    <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="link-button linkedin">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.instagram.com/your-username" target="_blank" class="link-button instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.snapchat.com/add/your-username" target="_blank" class="link-button snapchat">
+      <i class="fab fa-snapchat-ghost"></i> Snapchat
+    </a>
+    <a href="https://github.com/your-username" target="_blank" class="link-button github">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://discordapp.com/users/your-id" target="_blank" class="link-button discord">
+      <i class="fab fa-discord"></i> Discord
+    </a>
   </div>
 </body>
 </html>
