@@ -1,9 +1,6 @@
-
-
-  body {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1e3c72);
-    background-size: 400% 400%;
-    animation: gradientBG 3s ease infinite;
+/* Basic Background */
+body {
+    background: #1d2228; /* Dark background */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -11,49 +8,77 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative; /* For stacking the video behind the content */
+    overflow: hidden; /* Prevents the video from overflowing */
   }
   
+  /* Video Background */
+  #bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    z-index: -1; /* Places the video behind all other content */
+    opacity: 0.6; /* Optional: You can make it slightly transparent */
+  }
   
-  
+  /* Card Section (Main Content) with Glass Effect */
   .card {
     width: 360px;
-    background: #1f2a36;
-    border: 1px solid #2f3e4e;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+    background: rgba(29, 34, 40, 0.7); /* Semi-transparent dark background */
+    border: 2px solid #fb8122; /* Bright orange border */
+    border-radius: 15px;
     text-align: center;
     padding: 2rem 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    color: #e1e8ed;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: #e1e2e2; /* Light gray text */
+    backdrop-filter: blur(10px); /* Applying blur to the background for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari fix for backdrop filter */
+    position: relative; /* Keeps the content above the video */
+    z-index: 1; /* Ensures the card is above the video */
   }
   
-  .logo {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: #2a3b4c;
+  /* Button Styling */
+  .link-btn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
-    color: #a7c9f2;
-    margin: 0 auto 1rem;
-    box-shadow: 0 4px 14px rgba(80, 150, 255, 0.3);
+    justify-content: center;
+    background: #fb8122; /* Bright Orange */
+    margin: 0.6rem 0;
+    padding: 0.85rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #e1e2e2; /* Light gray text */
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(251, 129, 34, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
   
+  .link-btn:hover {
+    transform: translateY(-3px);
+    background: #ffffff; /* White background on hover */
+    color: #fb8122; /* Bright orange text on hover */
+    box-shadow: 0 6px 20px rgba(251, 129, 34, 0.5); /* Glow effect on hover */
+  }
+  
+  /* Title & Subtitle */
   .title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    color: #f1f5f9;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #fb8122; /* Bright Orange for title */
   }
   
   .subtitle {
     font-size: 1rem;
     margin-bottom: 1.2rem;
-    color: #b0bec5;
+    color: #e1e2e2; /* Light gray for subtitle */
   }
   
+  /* Social Icons */
   .social-icons {
     margin-bottom: 1.5rem;
   }
@@ -61,57 +86,20 @@
   .social-icons i {
     margin: 0 10px;
     font-size: 1.4rem;
-    color: #a0c4ff;
+    color: #fb8122; /* Bright Orange */
     transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
   }
   
   .social-icons i:hover {
-    color: #5ddcff;
+    color: #ffffff; /* White on hover */
     transform: scale(1.2);
   }
   
-  .link-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #00bcd4, #3f51b5, #9c27b0); /* Neon Teal, Electric Blue, Neon Purple */
-    margin: 0.6rem 0;
-    padding: 0.85rem 1.2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3); /* Soft glowing */
-    backdrop-filter: blur(5px); /* Frosted-glass effect */
-    transition: all 0.3s ease;
-    cursor: pointer;
-    animation: pulse 2s infinite; /* Pulse animation */
-  }
-  
-  .link-btn:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(to right, #9c27b0, #3f51b5, #00bcd4); /* Inverted gradient */
-    border: 2px solid #ffffff; /* Brighter border on hover */
-    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.5); /* Stronger glow on hover */
-    animation: none; /* Remove pulse on hover */
-  }
-  
-
-  
-  
-  
-  
-  
-  .link-btn i {
-    margin-right: 10px;
-    font-size: 1.2rem;
-  }
-  
+  /* Footer */
   .footer {
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #90a4ae;
+    color: #e1e2e2; /* Light gray footer */
   }
   
   /* Mobile Responsive */
@@ -129,19 +117,6 @@
     .social-icons i {
       font-size: 1.2rem;
       margin: 0 6px;
-    }
-  }
-  
-
-  @keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
     }
   }
   
