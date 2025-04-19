@@ -1,0 +1,114 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .card {
+    width: 360px;
+    background: #1e1e2f;
+    border: 1px solid #313154;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+  }
+  
+  .logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #3e3e61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 0 auto 1rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #f4f4f4;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    color: #a5a5a5;
+  }
+  
+  .social-icons {
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #b3d9ff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons i:hover {
+    color: #00ffff;
+    transform: scale(1.2);
+  }
+  
+  .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    margin: 0.6rem 0;
+    padding: 0.85rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(224, 0, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .link-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(to right, #e100ff, #7f00ff);
+  }
+  
+  .link-btn i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 420px) {
+    .card {
+      width: 90%;
+      padding: 1.5rem 1rem;
+    }
+  
+    .link-btn {
+      font-size: 0.9rem;
+      padding: 0.75rem 1rem;
+    }
+  
+    .social-icons i {
+      font-size: 1.2rem;
+      margin: 0 6px;
+    }
+  }
+  
