@@ -1,5 +1,9 @@
-body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+
+  body {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1e3c72);
+    background-size: 400% 400%;
+    animation: gradientBG 3s ease infinite;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,42 +13,45 @@ body {
     min-height: 100vh;
   }
   
+  
+  
   .card {
     width: 360px;
-    background: #1e1e2f;
-    border: 1px solid #313154;
-    border-radius: 25px;
+    background: #1f2a36;
+    border: 1px solid #2f3e4e;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     text-align: center;
     padding: 2rem 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    color: #ffffff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: #e1e8ed;
   }
   
   .logo {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background: #3e3e61;
+    background: #2a3b4c;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #a7c9f2;
     margin: 0 auto 1rem;
+    box-shadow: 0 4px 14px rgba(80, 150, 255, 0.3);
   }
   
   .title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-    color: #f4f4f4;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #f1f5f9;
   }
   
   .subtitle {
     font-size: 1rem;
     margin-bottom: 1.2rem;
-    color: #a5a5a5;
+    color: #b0bec5;
   }
   
   .social-icons {
@@ -54,12 +61,13 @@ body {
   .social-icons i {
     margin: 0 10px;
     font-size: 1.4rem;
-    color: #b3d9ff;
+    color: #a0c4ff;
     transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
   }
   
   .social-icons i:hover {
-    color: #00ffff;
+    color: #5ddcff;
     transform: scale(1.2);
   }
   
@@ -67,21 +75,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #7f00ff, #e100ff);
+    background: linear-gradient(to right, #00bcd4, #3f51b5, #9c27b0); /* Neon Teal, Electric Blue, Neon Purple */
     margin: 0.6rem 0;
     padding: 0.85rem 1.2rem;
     border-radius: 30px;
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(224, 0, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3); /* Soft glowing */
+    backdrop-filter: blur(5px); /* Frosted-glass effect */
     transition: all 0.3s ease;
+    cursor: pointer;
+    animation: pulse 2s infinite; /* Pulse animation */
   }
   
   .link-btn:hover {
     transform: translateY(-3px);
-    background: linear-gradient(to right, #e100ff, #7f00ff);
+    background: linear-gradient(to right, #9c27b0, #3f51b5, #00bcd4); /* Inverted gradient */
+    border: 2px solid #ffffff; /* Brighter border on hover */
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.5); /* Stronger glow on hover */
+    animation: none; /* Remove pulse on hover */
   }
+  
+
+  
+  
+  
+  
   
   .link-btn i {
     margin-right: 10px;
@@ -91,7 +111,7 @@ body {
   .footer {
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #cccccc;
+    color: #90a4ae;
   }
   
   /* Mobile Responsive */
@@ -109,6 +129,19 @@ body {
     .social-icons i {
       font-size: 1.2rem;
       margin: 0 6px;
+    }
+  }
+  
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
   
